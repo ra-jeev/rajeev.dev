@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  color-scheme: light;
+  --page-bg: #f8fafc;
+  --ink: #10201e;
+  --muted: #5f6f6b;
+  --line: #dce7e4;
+  --surface: #ffffff;
+  --accent: #0f766e;
+  --accent-soft: #dff6f1;
+  --warm: #b45309;
+}
+
+html {
+  background: var(--page-bg);
+  color: var(--ink);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 1)),
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.08), transparent 34rem);
+}
+
+a {
+  text-decoration-color: rgba(15, 118, 110, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+::selection {
+  background: #c7f2e9;
+  color: var(--ink);
+}
+
+.prose-scope {
+  color: var(--ink);
+}
+
+.prose-scope :where(h2, h3, h4) {
+  scroll-margin-top: 6rem;
+}
+
+.prose-scope :where(pre) {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.prose-scope :where(img) {
+  border-radius: 8px;
+}
+
+.page-shell {
+  width: min(100% - 2rem, 1120px);
+  margin-inline: auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
