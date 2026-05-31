@@ -7,13 +7,13 @@ defineProps<{
 
 <template>
   <figure class="my-8">
-    <img
+    <NuxtImg
       :src="src"
       :alt="alt || ''"
-      class="mx-auto max-h-[680px] w-auto max-w-full rounded-md border border-slate-200 bg-white object-contain"
+      class="mx-auto max-h-170 w-auto max-w-full rounded-md border border-zinc-200 bg-white object-contain dark:border-zinc-800 dark:bg-zinc-950"
       loading="lazy"
-    >
-    <figcaption v-if="alt" class="mt-2 text-center text-sm text-slate-500">
+    />
+    <figcaption v-if="alt" class="mt-2 text-center text-sm text-zinc-500 dark:text-zinc-500">
       {{ alt }}
     </figcaption>
   </figure>

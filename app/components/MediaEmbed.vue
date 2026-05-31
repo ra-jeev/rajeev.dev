@@ -20,7 +20,7 @@ const youtubeId = computed(() => {
 </script>
 
 <template>
-  <div class="my-8 overflow-hidden rounded-md border border-slate-200 bg-white">
+  <div class="my-8 overflow-hidden rounded-md border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
     <iframe
       v-if="youtubeId"
       class="aspect-video w-full"
@@ -31,9 +31,15 @@ const youtubeId = computed(() => {
       allowfullscreen
     />
     <div v-else class="p-4">
-      <UButton :to="url" target="_blank" rel="noopener noreferrer" variant="soft" color="neutral" icon="i-lucide-external-link">
+      <a
+        :href="url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-md border border-zinc-200 px-3 py-2 text-sm font-semibold text-zinc-700 no-underline transition hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-white"
+      >
+        <Icon name="lucide:external-link" class="size-4" />
         Open embedded media
-      </UButton>
+      </a>
     </div>
   </div>
 </template>

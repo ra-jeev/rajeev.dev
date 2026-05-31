@@ -18,35 +18,35 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en', {
 </script>
 
 <template>
-  <article class="group grid gap-4 border-b border-slate-200 py-7 sm:grid-cols-[10rem_1fr]">
-    <NuxtLink :to="post.path" class="overflow-hidden rounded-md bg-slate-200 no-underline sm:aspect-[4/3]">
-      <img
+  <article class="border-b border-zinc-200 py-7 first:pt-0 dark:border-zinc-800">
+    <NuxtLink :to="post.path" class="group grid gap-5 no-underline sm:grid-cols-[18rem_1fr]">
+      <CoverImage
         v-if="post.cover"
         :src="post.cover"
         :alt="post.title"
-        class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+        class="aspect-40/21 w-full rounded-md border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950"
         loading="lazy"
-      >
-      <div v-else class="grid h-full min-h-28 place-items-center bg-teal-50 text-teal-800">
-        <UIcon name="i-lucide-file-text" class="size-7" />
+      />
+      <div v-else class="aspect-40/21 w-full rounded-md border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950" />
+
+      <div class="min-w-0">
+        <time :datetime="post.date" class="text-sm text-zinc-500 dark:text-zinc-500">{{ formatDate(post.date) }}</time>
+        <h2 class="mt-2 text-xl font-semibold leading-snug text-zinc-950 group-hover:text-teal-700 dark:text-zinc-100 dark:group-hover:text-teal-300">
+          {{ post.title }}
+        </h2>
+        <p v-if="post.description" class="mt-2 leading-7 text-zinc-600 dark:text-zinc-400">
+          {{ post.description }}
+        </p>
+        <div v-if="post.tags?.length" class="mt-4 flex flex-wrap gap-2">
+          <span
+            v-for="tag in post.tags.slice(0, 3)"
+            :key="tag"
+            class="rounded-full border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:text-zinc-400"
+          >
+            {{ tag }}
+          </span>
+        </div>
       </div>
     </NuxtLink>
-
-    <div class="min-w-0">
-      <div class="mb-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-        <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-        <span v-for="tag in post.tags?.slice(0, 3)" :key="tag" class="rounded bg-slate-100 px-2 py-1 text-slate-600">
-          {{ tag }}
-        </span>
-      </div>
-      <h2 class="text-balance text-xl font-semibold text-slate-950">
-        <NuxtLink :to="post.path" class="no-underline hover:text-teal-700">
-          {{ post.title }}
-        </NuxtLink>
-      </h2>
-      <p v-if="post.description" class="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">
-        {{ post.description }}
-      </p>
-    </div>
   </article>
 </template>

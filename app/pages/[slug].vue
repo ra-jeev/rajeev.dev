@@ -33,30 +33,35 @@ useHead({
 </script>
 
 <template>
-  <article class="page-shell py-10">
-    <header class="mx-auto max-w-3xl">
-      <NuxtLink to="/blog" class="text-sm font-medium text-teal-700 no-underline hover:text-teal-900">
+  <article v-if="post" class="mx-auto w-full max-w-4xl px-5 py-10 sm:px-6">
+    <header>
+      <NuxtLink to="/blog" class="text-sm font-medium text-teal-700 no-underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200">
         Writing
       </NuxtLink>
-      <h1 class="mt-4 text-balance text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl">
+      <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-zinc-950 sm:text-5xl dark:text-zinc-100">
         {{ post.title }}
       </h1>
-      <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+      <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-zinc-500 dark:text-zinc-500">
         <time :datetime="post.date">{{ publishedDate }}</time>
-        <span v-for="tag in post.tags" :key="tag" class="rounded bg-slate-100 px-2 py-1 text-slate-600">
+        <span
+          v-for="tag in post.tags"
+          :key="tag"
+          class="rounded-full border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:text-zinc-400"
+        >
           {{ tag }}
         </span>
       </div>
     </header>
 
-    <img
+    <CoverImage
       v-if="post.cover"
       :src="post.cover"
       :alt="post.title"
-      class="mx-auto mt-8 aspect-[16/8] max-h-[520px] w-full max-w-5xl rounded-md border border-slate-200 bg-white object-cover"
-    >
+      class="mt-8 aspect-40/21 max-h-130 w-full rounded-md border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900"
+      loading="eager"
+    />
 
-    <div class="prose-scope prose prose-slate mx-auto mt-10 max-w-3xl">
+    <div class="prose-scope mx-auto mt-10 max-w-3xl">
       <ContentRenderer :value="post" />
     </div>
   </article>

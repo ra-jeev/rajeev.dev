@@ -26,24 +26,26 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="page-shell py-12">
-    <div class="max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">Archive</p>
-      <h1 class="mt-3 text-4xl font-semibold text-slate-950">Everything, by date.</h1>
-    </div>
+  <section class="mx-auto w-full max-w-4xl px-5 py-12 sm:px-6">
+    <header>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700 dark:text-teal-300">Archive</p>
+      <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">Everything, by date.</h1>
+    </header>
 
     <div class="mt-10 space-y-10">
-      <section v-for="[year, yearPosts] in groups" :key="year" class="grid gap-4 border-t border-slate-200 pt-6 md:grid-cols-[8rem_1fr]">
-        <h2 class="text-2xl font-semibold text-slate-950">{{ year }}</h2>
+      <section v-for="[year, yearPosts] in groups" :key="year" class="grid gap-4 border-t border-zinc-200 pt-6 md:grid-cols-[8rem_1fr] dark:border-zinc-800">
+        <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">{{ year }}</h2>
         <div class="space-y-4">
           <NuxtLink
             v-for="post in yearPosts"
             :key="post.path"
             :to="post.path"
-            class="grid gap-2 rounded-md border border-slate-200 bg-white p-4 no-underline transition hover:border-teal-300 hover:shadow-sm sm:grid-cols-[5rem_1fr]"
+            class="block rounded-md border border-zinc-200 p-4 no-underline transition hover:border-zinc-300 hover:bg-white dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/60"
           >
-            <time :datetime="post.date" class="text-sm text-slate-500">{{ formatDate(post.date) }}</time>
-            <span class="font-medium text-slate-950">{{ post.title }}</span>
+            <div class="grid gap-2 sm:grid-cols-[5rem_1fr]">
+              <time :datetime="post.date" class="text-sm text-zinc-500 dark:text-zinc-500">{{ formatDate(post.date) }}</time>
+              <span class="font-medium text-zinc-950 dark:text-zinc-100">{{ post.title }}</span>
+            </div>
           </NuxtLink>
         </div>
       </section>

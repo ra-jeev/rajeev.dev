@@ -1,9 +1,7 @@
 <template>
-  <UApp>
-    <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator color="#0f766e" />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </UApp>
+  <NuxtRouteAnnouncer />
+  <NuxtLoadingIndicator color="#14b8a6" />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
