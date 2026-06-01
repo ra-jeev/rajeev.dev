@@ -1,8 +1,8 @@
 title: GoldRoad
-description: Daily browser puzzle game built with React, MongoDB Atlas, and Google Cloud Run.
+description: Daily puzzle game where everyone gets the same challenge, backed by React, MongoDB, and Cloud Run.
 date: "2022-12-13"
 status: live
-source: open-source
+category: shipped
 repoUrl: https://github.com/ra-jeev/goldroad
 liveUrl: https://goldroad.web.app
 writeupUrl: /creating-daily-puzzle-game-with-react-mongodb-gcp-cloud-run
@@ -11,4 +11,4 @@ tags:
   - MongoDB
   - Game
 featured: false
-order: 6
+order: 13

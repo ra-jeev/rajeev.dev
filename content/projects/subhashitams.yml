@@ -1,10 +1,11 @@
 title: Subhashitams
-description: A private production project for reading and revisiting Sanskrit subhashitams.
+description: Curated Sanskrit subhashitams with Devanagari text, transliteration, and Hindi/English meanings.
 status: live
-source: private
+category: shipped
+liveUrl: https://subhashitams.com
 tags:
   - Sanskrit
   - Reading
   - Personal
-featured: true
-order: 20
+featured: false
+order: 11

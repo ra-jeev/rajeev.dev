@@ -2,7 +2,6 @@
 const navigation = [
   { label: 'Writing', to: '/blog' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Archive', to: '/archive' },
   { label: 'About', to: '/about' },
 ]
 </script>
@@ -39,8 +38,9 @@ const navigation = [
 
     <footer class="mt-20 border-t border-zinc-200/80 dark:border-zinc-800/90">
       <div class="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5 py-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 dark:text-zinc-400">
-        <p>Rajeev writes and builds around Nuxt, Cloudflare, AI, and small useful software.</p>
+        <p>Writing, shipped apps, and experiments by Rajeev.</p>
         <div class="flex items-center gap-4">
+          <NuxtLink to="/archive" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Archive</NuxtLink>
           <a href="/rss.xml" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">RSS</a>
           <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Sitemap</a>
         </div>

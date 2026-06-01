@@ -12,17 +12,17 @@ const recentPosts = computed(() => posts.value || [])
 const featuredProjects = computed(() => (projects.value || []).filter(project => project.featured).slice(0, 4))
 
 const links = [
-  { label: 'GitHub', href: 'https://github.com/ra-jeev', icon: 'lucide:github' },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/rajeev.dev', icon: 'lucide:cloud' },
-  { label: 'Twitter', href: 'https://twitter.com/ra_jeeves', icon: 'lucide:message-circle' },
-  { label: 'RSS', href: '/rss.xml', icon: 'lucide:rss' },
+  { label: 'GitHub', href: 'https://github.com/ra-jeev', icon: 'lucide:github', external: true },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/rajeev.dev', icon: 'lucide:cloud', external: true },
+  { label: 'Twitter', href: 'https://twitter.com/ra_jeeves', icon: 'lucide:message-circle', external: true },
+  { label: 'RSS', href: '/rss.xml', icon: 'lucide:rss', external: false },
 ]
 
 useSeoMeta({
   title: 'Home',
-  description: 'Rajeev builds and writes about Nuxt, Cloudflare, AI, and useful software experiments.',
+  description: 'Rajeev builds small software, ships useful web apps, and writes about the process.',
   ogTitle: 'Rajeev',
-  ogDescription: 'Writing, projects, experiments, and notes from Rajeev.',
+  ogDescription: 'Writing, projects, shipped apps, and experiments from Rajeev.',
 })
 </script>
 
@@ -31,14 +31,14 @@ useSeoMeta({
     <section class="py-14 sm:py-18">
       <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Rajeev</p>
       <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-zinc-950 sm:text-5xl dark:text-zinc-100">
-        I build small useful software and write down what I learn.
+        I build useful web apps and write about the decisions behind them.
       </h1>
       <div class="mt-6 max-w-2xl space-y-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
         <p>
-          This is my home base for articles, experiments, shipped apps, and the occasional note from the edges of Nuxt, Cloudflare, AI, and developer tooling.
+          This is my home base for shipped projects, small experiments, and practical notes from working with Nuxt, Cloudflare, AI tools, and developer workflows.
         </p>
         <p>
-          Some projects are open source, some are private production apps, and many began as blog posts that got just useful enough to keep around.
+          The through-line is usually the same: take a small idea seriously, make it usable, and write down what was learned along the way.
         </p>
       </div>
       <div class="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
@@ -61,7 +61,7 @@ useSeoMeta({
       <div class="mb-5 flex items-end justify-between gap-4">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Writing</p>
-          <h2 class="mt-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Recent posts</h2>
+          <h2 class="mt-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Recent writing</h2>
         </div>
         <NuxtLink to="/blog" class="hidden items-center gap-1 text-sm font-semibold text-zinc-600 hover:text-fuchsia-700 sm:inline-flex dark:text-zinc-400 dark:hover:text-fuchsia-300">
           All posts
@@ -91,7 +91,7 @@ useSeoMeta({
       <div class="mb-6 flex items-end justify-between gap-4">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Projects</p>
-          <h2 class="mt-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Selected work</h2>
+          <h2 class="mt-2 text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Selected projects</h2>
         </div>
         <NuxtLink to="/projects" class="hidden items-center gap-1 text-sm font-semibold text-zinc-600 hover:text-fuchsia-700 sm:inline-flex dark:text-zinc-400 dark:hover:text-fuchsia-300">
           All projects
@@ -104,16 +104,26 @@ useSeoMeta({
           :key="project.title"
           class="border-t border-zinc-200 pt-5 dark:border-zinc-800"
         >
-          <div class="flex items-center gap-2">
-            <h3 class="font-semibold text-zinc-950 dark:text-zinc-100">{{ project.title }}</h3>
-            <span class="rounded-full border border-fuchsia-200 px-2 py-0.5 text-xs font-medium capitalize text-fuchsia-700 dark:border-fuchsia-900/70 dark:text-fuchsia-300">
-              {{ project.source === 'private' ? 'private' : project.status }}
-            </span>
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="flex min-w-0 items-center gap-2 font-semibold text-zinc-950 dark:text-zinc-100">
+              {{ project.title }}
+              <a
+                v-if="project.liveUrl"
+                :href="project.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Open live project"
+                :aria-label="`Open ${project.title}`"
+                class="inline-flex size-7 shrink-0 items-center justify-center rounded-md text-zinc-500 no-underline transition hover:bg-zinc-100 hover:text-fuchsia-700 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-fuchsia-300"
+              >
+                <Icon name="lucide:external-link" class="size-4" />
+              </a>
+            </h3>
+            <ProjectLinks :project="project" class="shrink-0" />
           </div>
           <p class="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
             {{ project.description }}
           </p>
-          <ProjectLinks :project="project" class="mt-4" />
         </article>
       </div>
     </section>
@@ -126,6 +136,7 @@ useSeoMeta({
           :key="link.href"
           :href="link.href"
           class="inline-flex items-center gap-1.5 text-zinc-700 no-underline hover:text-fuchsia-700 dark:text-zinc-300 dark:hover:text-fuchsia-300"
+          :target="link.external ? '_blank' : undefined"
           rel="noopener noreferrer"
         >
           <Icon :name="link.icon" class="size-4" />

@@ -3,14 +3,12 @@ const { data: projects } = await useAsyncData('projects', () => queryCollection(
   .order('order', 'ASC')
   .all())
 
-const liveProjects = computed(() => (projects.value || []).filter(project => project.status === 'live'))
-const experiments = computed(() => (projects.value || []).filter(project => project.status !== 'live'))
-const privateProjects = computed(() => liveProjects.value.filter(project => project.source === 'private'))
-const openProjects = computed(() => liveProjects.value.filter(project => project.source !== 'private'))
+const shippedProjects = computed(() => (projects.value || []).filter(project => project.category === 'shipped'))
+const experiments = computed(() => (projects.value || []).filter(project => project.category === 'experiment'))
 
 useSeoMeta({
   title: 'Projects',
-  description: 'Open source experiments, live apps, and personal projects by Rajeev.',
+  description: 'Projects, shipped apps, and experiments by Rajeev.',
 })
 </script>
 
@@ -19,33 +17,29 @@ useSeoMeta({
     <header class="max-w-2xl">
       <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Projects</p>
       <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">
-        Things I have built, shipped, or written about.
+        Software I have shipped, shared, or learned from.
       </h1>
       <p class="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-        A working index of open source projects, public demos, and private production apps. Some have source code, some have write-ups, and some are simply live things I maintain.
+        A working index of apps, tools, demos, and writing-adjacent builds. Some link to code, some link to the live app, and some are best understood through the write-up behind them.
       </p>
     </header>
 
-    <section v-if="openProjects.length" class="mt-12">
-      <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Open source and live demos</h2>
-      <div class="mt-5 grid gap-5">
-        <ProjectCard v-for="project in openProjects" :key="project.id || project.title" :project="project" />
-      </div>
-    </section>
-
-    <section v-if="privateProjects.length" class="mt-12">
-      <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Private production projects</h2>
+    <section v-if="shippedProjects.length" class="mt-12">
+      <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Shipped apps</h2>
       <p class="mt-3 leading-7 text-zinc-600 dark:text-zinc-400">
-        These are public-facing or production projects where the source is private.
+        Things that are live as products, utilities, or long-running public sites.
       </p>
-      <div class="mt-5 grid gap-5">
-        <ProjectCard v-for="project in privateProjects" :key="project.id || project.title" :project="project" />
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        <ProjectCard v-for="project in shippedProjects" :key="project.id || project.title" :project="project" />
       </div>
     </section>
 
     <section v-if="experiments.length" class="mt-12">
-      <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Older experiments</h2>
-      <div class="mt-5 grid gap-5">
+      <h2 class="text-2xl font-semibold text-zinc-950 dark:text-zinc-100">Experiments</h2>
+      <p class="mt-3 leading-7 text-zinc-600 dark:text-zinc-400">
+        Public demos, smaller builds, and learning projects. The ones I would point to first are kept near the top.
+      </p>
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
         <ProjectCard v-for="project in experiments" :key="project.id || project.title" :project="project" />
       </div>
     </section>

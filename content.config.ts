@@ -40,7 +40,7 @@ export default defineContentConfig({
         description: z.string(),
         date: z.string().optional(),
         status: z.enum(['live', 'experiment', 'archived']).default('experiment'),
-        source: z.enum(['open-source', 'private']).default('open-source'),
+        category: z.enum(['shipped', 'experiment']).default('experiment'),
         repoUrl: z.string().url().optional(),
         liveUrl: z.string().url().optional(),
         writeupUrl: z.string().optional(),

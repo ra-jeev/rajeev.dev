@@ -1,10 +1,11 @@
-title: Ramcharitmanas
-description: A private production project around reading and exploring the Ramcharitmanas.
+title: Sri Ram Charit Manas
+description: Clean, ad-free PWA for reading the complete Sri Ram Charit Manas with search and offline support.
 status: live
-source: private
+category: shipped
+liveUrl: https://ramcharithmanas.com
 tags:
   - Reading
   - Devotional Texts
   - Personal
-featured: true
-order: 21
+featured: false
+order: 12

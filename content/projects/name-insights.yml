@@ -1,8 +1,8 @@
 title: Name Insights
-description: AI-assisted domain name scoring, comparison, and suggestion tool.
+description: AI-assisted domain name scoring and comparison tool for choosing better project names.
 date: "2024-07-29"
 status: live
-source: open-source
+category: experiment
 repoUrl: https://github.com/ra-jeev/domain-name-insights
 liveUrl: https://name-insights.nuxt.dev
 writeupUrl: /leveraging-ai-for-smarter-domain-name-decisions
@@ -10,5 +10,5 @@ tags:
   - Nuxt
   - AI
   - Domains
-featured: true
-order: 3
+featured: false
+order: 5

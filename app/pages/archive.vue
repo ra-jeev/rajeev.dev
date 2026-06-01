@@ -29,7 +29,7 @@ useSeoMeta({
   <section class="mx-auto w-full max-w-4xl px-5 py-12 sm:px-6">
     <header>
       <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Archive</p>
-      <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">Everything, by date.</h1>
+      <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">All writing, by date.</h1>
     </header>
 
     <div class="mt-10 space-y-10">

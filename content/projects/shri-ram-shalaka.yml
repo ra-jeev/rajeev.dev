@@ -1,0 +1,11 @@
+title: Shri Ram Shalaka
+description: Bilingual Shri Ram Shalaka Prashnavali app for devotional guidance, with PWA support and Play Store presence.
+status: live
+category: shipped
+liveUrl: https://shriramshalaka.com
+tags:
+  - Nuxt
+  - PWA
+  - Devotional
+featured: false
+order: 10

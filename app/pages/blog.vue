@@ -5,7 +5,7 @@ const { data: posts } = await useAsyncData('blog-posts', () => queryCollection('
 
 useSeoMeta({
   title: 'Writing',
-  description: 'Articles and build notes by Rajeev.',
+  description: 'Build notes, tutorials, and practical project write-ups by Rajeev.',
 })
 </script>
 
@@ -13,9 +13,9 @@ useSeoMeta({
   <section class="mx-auto w-full max-w-4xl px-5 py-12 sm:px-6">
     <header class="max-w-2xl">
       <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Writing</p>
-      <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">Articles, build notes, and experiments.</h1>
+      <h1 class="mt-3 text-4xl font-semibold leading-tight text-zinc-950 dark:text-zinc-100">Practical notes from building things.</h1>
       <p class="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-        The old Hashnode article URLs still live at the root, while this page collects the writing in one place.
+        Mostly hands-on posts about Nuxt, Cloudflare, AI, developer tooling, and the decisions that show up while turning ideas into working software.
       </p>
     </header>
 
