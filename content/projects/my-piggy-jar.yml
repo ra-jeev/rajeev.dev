@@ -1,0 +1,14 @@
+title: My Piggy Jar
+description: Family piggy bank tracker built as a useful personal app and later rewritten as FamPro.
+date: "2022-10-01"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/kids-piggy-app
+liveUrl: https://www.mypiggyjar.com
+writeupUrl: /new-years-promise-to-my-son
+tags:
+  - React
+  - Amplify
+  - Personal
+featured: false
+order: 8

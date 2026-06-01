@@ -1,0 +1,14 @@
+title: Hub Chat
+description: Cloudflare Workers AI playground built with NuxtHub and Nuxt.
+date: "2024-08-29"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/hub-chat
+liveUrl: https://hub-chat.nuxt.dev
+writeupUrl: /create-cloudflare-workers-ai-llm-playground-using-nuxthub-and-nuxtui
+tags:
+  - NuxtHub
+  - Cloudflare
+  - AI
+featured: false
+order: 5

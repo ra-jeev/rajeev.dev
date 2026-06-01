@@ -31,7 +31,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en', {
 
       <div class="min-w-0">
         <time :datetime="post.date" class="text-sm text-zinc-500 dark:text-zinc-500">{{ formatDate(post.date) }}</time>
-        <h2 class="mt-2 text-xl font-semibold leading-snug text-zinc-950 group-hover:text-teal-700 dark:text-zinc-100 dark:group-hover:text-teal-300">
+        <h2 class="mt-2 text-xl font-semibold leading-snug text-zinc-950 group-hover:text-fuchsia-700 dark:text-zinc-100 dark:group-hover:text-fuchsia-300">
           {{ post.title }}
         </h2>
         <p v-if="post.description" class="mt-2 leading-7 text-zinc-600 dark:text-zinc-400">

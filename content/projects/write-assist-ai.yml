@@ -1,0 +1,14 @@
+title: Write Assist AI
+description: VS Code extension for AI-assisted writing actions in Markdown files.
+date: "2023-06-20"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/write-assist-ai
+liveUrl: https://marketplace.visualstudio.com/items?itemName=ra-jeev.write-assist-ai
+writeupUrl: /creating-an-openai-powered-writing-assistant-vs-code-extension
+tags:
+  - VS Code
+  - TypeScript
+  - OpenAI
+featured: false
+order: 7

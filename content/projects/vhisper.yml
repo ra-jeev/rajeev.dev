@@ -1,0 +1,14 @@
+title: Vhisper
+description: Voice notes app with AI transcription and post-processing, built with Nuxt, NuxtHub, Cloudflare Workers AI, D1, and R2.
+date: "2024-11-29"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/vhisper
+liveUrl: https://vhisper.nuxt.dev
+writeupUrl: /building-voice-notes-app-with-ai-transcription-and-post-processing
+tags:
+  - Nuxt
+  - Cloudflare
+  - AI
+featured: true
+order: 1

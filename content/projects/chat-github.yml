@@ -1,0 +1,14 @@
+title: Chat GitHub
+description: Natural-language GitHub search interface powered by OpenAI and built with Nuxt.
+date: "2024-10-04"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/chat-github
+liveUrl: https://chat-github.nuxt.dev
+writeupUrl: /building-a-chat-interface-to-search-github
+tags:
+  - Nuxt
+  - GitHub
+  - AI
+featured: true
+order: 2

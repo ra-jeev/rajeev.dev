@@ -1,0 +1,14 @@
+title: Brew Haven
+description: Coffee shop customization demo using DevCycle feature flags, React, and Netlify Functions.
+date: "2024-12-29"
+status: live
+source: open-source
+repoUrl: https://github.com/ra-jeev/brew-haven
+liveUrl: https://brewwhaven.netlify.app
+writeupUrl: /building-brew-haven-ab-testing-my-coffee-shop-dreams-with-devcycle
+tags:
+  - React
+  - Feature Flags
+  - Netlify
+featured: true
+order: 4

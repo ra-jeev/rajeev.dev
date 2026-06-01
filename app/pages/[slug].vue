@@ -35,7 +35,7 @@ useHead({
 <template>
   <article v-if="post" class="mx-auto w-full max-w-4xl px-5 py-10 sm:px-6">
     <header>
-      <NuxtLink to="/blog" class="text-sm font-medium text-teal-700 no-underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200">
+      <NuxtLink to="/blog" class="text-sm font-medium text-fuchsia-700 no-underline hover:text-fuchsia-800 dark:text-fuchsia-300 dark:hover:text-fuchsia-200">
         Writing
       </NuxtLink>
       <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-zinc-950 sm:text-5xl dark:text-zinc-100">

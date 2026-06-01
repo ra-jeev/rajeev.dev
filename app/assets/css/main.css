@@ -15,7 +15,7 @@ body {
 }
 
 ::selection {
-  background: rgb(20 184 166 / 0.22);
+  background: rgb(217 70 239 / 0.22);
 }
 
 a {
@@ -85,10 +85,10 @@ a {
 }
 
 .prose-scope a {
-  color: #0f766e;
+  color: #a21caf;
   font-weight: 500;
   text-decoration-line: underline;
-  text-decoration-color: rgb(15 118 110 / 0.35);
+  text-decoration-color: rgb(162 28 175 / 0.35);
 }
 
 .prose-scope a:hover {
@@ -96,12 +96,12 @@ a {
 }
 
 .dark .prose-scope a {
-  color: #5eead4;
-  text-decoration-color: rgb(94 234 212 / 0.35);
+  color: #f0abfc;
+  text-decoration-color: rgb(240 171 252 / 0.35);
 }
 
 .prose-scope blockquote {
-  border-left: 3px solid #14b8a6;
+  border-left: 3px solid #d946ef;
   color: #52525b;
   padding-left: 1rem;
 }
