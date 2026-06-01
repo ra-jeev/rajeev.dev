@@ -4,7 +4,7 @@ date: "2024-08-29"
 status: live
 category: experiment
 repoUrl: https://github.com/ra-jeev/hub-chat
-liveUrl: https://hub-chat.nuxt.dev
+liveUrl: https://hub-chat.rajeevs.workers.dev
 writeupUrl: /create-cloudflare-workers-ai-llm-playground-using-nuxthub-and-nuxtui
 tags:
   - NuxtHub

@@ -11,13 +11,6 @@ const { data: projects } = await useAsyncData('home-projects', () => queryCollec
 const recentPosts = computed(() => posts.value || [])
 const featuredProjects = computed(() => (projects.value || []).filter(project => project.featured).slice(0, 4))
 
-const links = [
-  { label: 'GitHub', href: 'https://github.com/ra-jeev', icon: 'lucide:github', external: true },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/rajeev.dev', icon: 'lucide:cloud', external: true },
-  { label: 'Twitter', href: 'https://twitter.com/ra_jeeves', icon: 'lucide:message-circle', external: true },
-  { label: 'RSS', href: '/rss.xml', icon: 'lucide:rss', external: false },
-]
-
 useSeoMeta({
   title: 'Home',
   description: 'Rajeev builds small software, ships useful web apps, and writes about the process.',
@@ -71,17 +64,24 @@ useSeoMeta({
       <div class="divide-y divide-zinc-200 dark:divide-zinc-800">
         <article v-for="post in recentPosts" :key="post.path" class="py-5 first:pt-0">
           <NuxtLink :to="post.path" class="group block no-underline">
-            <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-              <h3 class="text-lg font-semibold leading-snug text-zinc-950 group-hover:text-fuchsia-700 dark:text-zinc-100 dark:group-hover:text-fuchsia-300">
-                {{ post.title }}
-              </h3>
-              <time :datetime="post.date" class="shrink-0 text-sm text-zinc-500 dark:text-zinc-500">
-                {{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}
-              </time>
-            </div>
+            <h3 class="text-lg font-semibold leading-snug text-zinc-950 group-hover:text-fuchsia-700 dark:text-zinc-100 dark:group-hover:text-fuchsia-300">
+              {{ post.title }}
+            </h3>
+            <time :datetime="post.date" class="mt-2 block text-sm text-zinc-500 dark:text-zinc-500">
+              {{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}
+            </time>
             <p v-if="post.description" class="mt-2 max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">
               {{ post.description }}
             </p>
+            <div v-if="post.tags?.length" class="mt-4 flex flex-wrap gap-2">
+              <span
+                v-for="tag in post.tags.slice(0, 3)"
+                :key="tag"
+                class="rounded-full border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:text-zinc-400"
+              >
+                {{ tag }}
+              </span>
+            </div>
           </NuxtLink>
         </article>
       </div>
@@ -130,19 +130,7 @@ useSeoMeta({
 
     <section class="border-t border-zinc-200 py-10 dark:border-zinc-800">
       <p class="text-sm font-semibold uppercase tracking-[0.16em] text-fuchsia-700 dark:text-fuchsia-300">Elsewhere</p>
-      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
-        <a
-          v-for="link in links"
-          :key="link.href"
-          :href="link.href"
-          class="inline-flex items-center gap-1.5 text-zinc-700 no-underline hover:text-fuchsia-700 dark:text-zinc-300 dark:hover:text-fuchsia-300"
-          :target="link.external ? '_blank' : undefined"
-          rel="noopener noreferrer"
-        >
-          <Icon :name="link.icon" class="size-4" />
-          {{ link.label }}
-        </a>
-      </div>
+      <SiteSocialLinks show-labels class="mt-4" />
     </section>
   </div>
 </template>

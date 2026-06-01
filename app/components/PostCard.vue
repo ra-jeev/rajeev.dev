@@ -30,10 +30,10 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en', {
       <div v-else class="aspect-40/21 w-full rounded-md border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950" />
 
       <div class="min-w-0">
-        <time :datetime="post.date" class="text-sm text-zinc-500 dark:text-zinc-500">{{ formatDate(post.date) }}</time>
-        <h2 class="mt-2 text-xl font-semibold leading-snug text-zinc-950 group-hover:text-fuchsia-700 dark:text-zinc-100 dark:group-hover:text-fuchsia-300">
+        <h2 class="text-xl font-semibold leading-snug text-zinc-950 group-hover:text-fuchsia-700 dark:text-zinc-100 dark:group-hover:text-fuchsia-300">
           {{ post.title }}
         </h2>
+        <time :datetime="post.date" class="mt-2 block text-sm text-zinc-500 dark:text-zinc-500">{{ formatDate(post.date) }}</time>
         <p v-if="post.description" class="mt-2 leading-7 text-zinc-600 dark:text-zinc-400">
           {{ post.description }}
         </p>

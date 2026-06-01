@@ -37,12 +37,12 @@ const navigation = [
     </main>
 
     <footer class="mt-20 border-t border-zinc-200/80 dark:border-zinc-800/90">
-      <div class="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5 py-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 dark:text-zinc-400">
-        <p>Writing, shipped apps, and experiments by Rajeev.</p>
-        <div class="flex items-center gap-4">
-          <NuxtLink to="/archive" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Archive</NuxtLink>
-          <a href="/rss.xml" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">RSS</a>
-          <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Sitemap</a>
+      <div class="mx-auto flex w-full max-w-4xl flex-col gap-5 px-5 py-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 dark:text-zinc-400">
+        <p>&copy; {{ new Date().getFullYear() }} Rajeev R Sharma.</p>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <NuxtLink to="/archive" class="font-medium hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Archive</NuxtLink>
+          <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="font-medium hover:text-fuchsia-700 dark:hover:text-fuchsia-300">Sitemap</a>
+          <SiteSocialLinks />
         </div>
       </div>
     </footer>

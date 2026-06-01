@@ -4,7 +4,7 @@ date: "2022-12-13"
 status: live
 category: shipped
 repoUrl: https://github.com/ra-jeev/goldroad
-liveUrl: https://goldroad.web.app
+liveUrl: https://playgoldroad.com
 writeupUrl: /creating-daily-puzzle-game-with-react-mongodb-gcp-cloud-run
 tags:
   - React
