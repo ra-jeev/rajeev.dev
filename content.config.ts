@@ -19,19 +19,6 @@ export default defineContentConfig({
         hashnodeId: z.string().optional(),
       }),
     }),
-    drafts: defineCollection({
-      type: 'page',
-      source: 'drafts/*.md',
-      schema: z.object({
-        title: z.string(),
-        description: z.string().optional(),
-        slug: z.string(),
-        cover: z.string().optional(),
-        tags: z.array(z.string()).default([]),
-        draft: z.boolean().default(true),
-        hashnodeId: z.string().optional(),
-      }),
-    }),
     projects: defineCollection({
       type: 'data',
       source: 'projects/*.yml',
