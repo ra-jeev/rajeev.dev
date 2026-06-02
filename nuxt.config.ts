@@ -56,6 +56,7 @@ export default defineNuxtConfig({
       autoSubfolderIndex: false,
       routes: [
         '/',
+        '/rss.xml',
       ],
     },
   },
