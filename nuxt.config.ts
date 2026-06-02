@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   modules: [
+    'nitro-cloudflare-dev',
     '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
@@ -39,6 +40,11 @@ export default defineNuxtConfig({
     },
   },
    nitro: {
+    preset: 'cloudflare-module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
     prerender: {
       crawlLinks: true,
       autoSubfolderIndex: false,

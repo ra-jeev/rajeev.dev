@@ -7,7 +7,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "migrate:hashnode": "node scripts/migrate-hashnode.mjs",
-    "preview": "nuxt preview"
+    "preview": "pnpm run build && wrangler dev",
+    "postinstall": "nuxt prepare",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@nuxt/content": "^3.14.0",
@@ -25,7 +28,9 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.111",
-    "@tailwindcss/vite": "^4.3.0"
+    "@tailwindcss/vite": "^4.3.0",
+    "nitro-cloudflare-dev": "^0.2.2",
+    "wrangler": "^4.96.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
