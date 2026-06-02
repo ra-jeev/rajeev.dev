@@ -1,11 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
     '@nuxt/image',
@@ -18,15 +17,14 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  compatibilityDate: '2024-04-03',
-  colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
-    classSuffix: '',
-  },
+  compatibilityDate: '2025-07-15',
   site: {
     url: 'https://rajeev.dev',
-    name: 'Rajeev',
+    name: 'Rajeev R Sharma',
+  },
+  sitemap: {
+    zeroRuntime: true,
+    sitemapsPathPrefix: '/sitemap',
   },
   app: {
     head: {
@@ -40,18 +38,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-  sitemap: {
-    sources: [
-      '/api/__sitemap__/urls',
-    ],
-  },
-  robots: {
-    groups: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-    ],
-    sitemap: 'https://rajeev.dev/sitemap.xml',
+   nitro: {
+    prerender: {
+      crawlLinks: true,
+      autoSubfolderIndex: false,
+      routes: [
+        '/',
+      ],
+    },
   },
 })
