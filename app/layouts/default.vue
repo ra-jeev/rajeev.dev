@@ -10,9 +10,10 @@ const navigation = [
   <div class="min-h-screen bg-stone-50 text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100">
     <header class="sticky top-0 z-40 border-b border-zinc-200/80 bg-stone-50/85 backdrop-blur dark:border-zinc-800/90 dark:bg-zinc-950/85">
       <div class="mx-auto flex h-16 w-full max-w-4xl items-center justify-between gap-4 px-5 sm:px-6">
-        <NuxtLink to="/" class="flex items-center gap-3 no-underline" aria-label="Rajeev home">
-          <span class="inline-flex size-8 items-center justify-center rounded-full bg-fuchsia-600 text-sm font-semibold text-white dark:bg-fuchsia-500 dark:text-zinc-950">R</span>
-          <span class="hidden text-sm font-semibold tracking-wide text-zinc-950 sm:inline dark:text-zinc-100">Rajeev R Sharma</span>
+        <NuxtLink to="/" class="flex min-w-0 items-center gap-2.5 no-underline sm:gap-3" aria-label="Rajeev home">
+          <img src="/favicon.svg" alt="" class="size-6 shrink-0 sm:size-8">
+          <span class="min-w-0 truncate text-lg font-semibold text-zinc-950 sm:hidden dark:text-zinc-100">Rajeev</span>
+          <span class="hidden min-w-0 truncate text-lg font-semibold text-zinc-950 sm:inline md:text-xl dark:text-zinc-100">Rajeev R Sharma</span>
         </NuxtLink>
 
         <div class="flex items-center gap-2">
