@@ -1,75 +1,49 @@
-# Nuxt Content Starter
+# rajeev.dev
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+Source for [rajeev.dev](https://rajeev.dev), my personal site for writing, projects, and experiments.
 
-## Setup
+The site is built with Nuxt, Nuxt Content, Tailwind CSS, and Cloudflare Workers.
 
-Make sure to install dependencies:
+## Development
+
+Install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the local development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+Build for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+Preview the Cloudflare Workers build locally:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Deploy to Cloudflare Workers:
+
+```bash
+pnpm deploy
+```
+
+## Content
+
+Posts live in `content/posts`. Project metadata and other site content live under `content`.
+
+Some posts reference or link to separate open source projects. Those projects keep their own licenses in their own repositories. Unless a file in this repository says otherwise, the writing and personal site content here are not licensed for reuse.
+
+## License
+
+The source code for this site is licensed under the MIT License. See [LICENSE](LICENSE).
+
+The articles, notes, personal branding, images, and other non-code content are copyright Rajeev R Sharma, all rights reserved, unless explicitly stated otherwise. Third-party assets remain the property of their respective owners.
