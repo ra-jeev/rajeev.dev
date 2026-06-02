@@ -21,7 +21,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat('en', {
 
 useSeoMeta({
   title: 'Archive',
-  description: 'A chronological archive of Rajeev\'s writing.',
+  description: 'A chronological archive of Rajeev R Sharma\'s writing.',
 })
 </script>
 

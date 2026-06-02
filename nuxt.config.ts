@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
-    '@nuxt/image',
     '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
@@ -17,6 +16,9 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    optimizeDeps: {
+      include: [],
+    },
   },
   compatibilityDate: '2025-07-15',
   site: {
@@ -30,16 +32,20 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      titleTemplate: '%s · Rajeev',
+      titleTemplate: '%s · Rajeev R Sharma',
       meta: [
-        { name: 'theme-color', content: '#0f172a' },
+        { name: 'theme-color', content: '#fafaf9', media: '(prefers-color-scheme: light)' },
+        { name: 'theme-color', content: '#09090b', media: '(prefers-color-scheme: dark)' },
+        { property: 'og:site_name', content: 'Rajeev R Sharma' },
       ],
       link: [
-        { rel: 'alternate', type: 'application/rss+xml', title: 'Rajeev RSS', href: '/rss.xml' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'alternate icon', href: '/favicon.ico' },
+        { rel: 'alternate', type: 'application/rss+xml', title: 'Rajeev R Sharma RSS', href: '/rss.xml' },
       ],
     },
   },
-   nitro: {
+  nitro: {
     preset: 'cloudflare-module',
     cloudflare: {
       deployConfig: true,

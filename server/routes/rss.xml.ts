@@ -19,9 +19,9 @@ export default defineEventHandler(async (event) => {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Rajeev</title>
+    <title>Rajeev R Sharma</title>
     <link>${siteUrl}</link>
-    <description>Writing by Rajeev.</description>
+    <description>Writing and projects by Rajeev R Sharma.</description>
     ${items}
   </channel>
 </rss>`

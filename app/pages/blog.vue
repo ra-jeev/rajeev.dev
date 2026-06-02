@@ -5,7 +5,7 @@ const { data: posts } = await useAsyncData('blog-posts', () => queryCollection('
 
 useSeoMeta({
   title: 'Writing',
-  description: 'Build notes, tutorials, and practical project write-ups by Rajeev.',
+  description: 'Build notes, tutorials, and practical project write-ups by Rajeev R Sharma.',
 })
 </script>
 

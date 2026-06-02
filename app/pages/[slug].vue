@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const route = useRoute()
+const siteUrl = 'https://rajeev.dev'
 const path = computed(() => `/${route.params.slug}`)
+const canonicalUrl = computed(() => `${siteUrl}${path.value}`)
 
 const { data: post } = await useAsyncData(`post-${route.params.slug}`, () => queryCollection('posts')
   .path(path.value)
@@ -15,19 +17,33 @@ const publishedDate = computed(() => new Intl.DateTimeFormat('en', {
   day: 'numeric',
   year: 'numeric',
 }).format(new Date(post.value!.date)))
+const coverUrl = computed(() => {
+  if (!post.value?.cover) {
+    return undefined
+  }
+
+  return post.value.cover.startsWith('http')
+    ? post.value.cover
+    : `${siteUrl}${post.value.cover}`
+})
 
 useSeoMeta({
   title: () => post.value?.title || 'Article',
   description: () => post.value?.description || undefined,
   ogTitle: () => post.value?.title || undefined,
   ogDescription: () => post.value?.description || undefined,
-  ogImage: () => post.value?.cover || undefined,
+  ogImage: () => coverUrl.value,
+  ogType: 'article',
+  articlePublishedTime: () => post.value?.date || undefined,
   twitterCard: 'summary_large_image',
+  twitterTitle: () => post.value?.title || undefined,
+  twitterDescription: () => post.value?.description || undefined,
+  twitterImage: () => coverUrl.value,
 })
 
 useHead({
   link: [
-    { rel: 'canonical', href: `https://rajeev.dev${path.value}` },
+    { rel: 'canonical', href: canonicalUrl },
   ],
 })
 </script>

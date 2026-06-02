@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About',
-  description: 'About Rajeev, his writing, and the projects on rajeev.dev.',
+  description: 'About Rajeev R Sharma, his writing, and the projects on rajeev.dev.',
 })
 </script>
 

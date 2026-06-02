@@ -8,7 +8,7 @@ const experiments = computed(() => (projects.value || []).filter(project => proj
 
 useSeoMeta({
   title: 'Projects',
-  description: 'Projects, shipped apps, and experiments by Rajeev.',
+  description: 'Projects, shipped apps, and experiments by Rajeev R Sharma.',
 })
 </script>
 

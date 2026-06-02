@@ -13,9 +13,9 @@ const featuredProjects = computed(() => (projects.value || []).filter(project =>
 
 useSeoMeta({
   title: 'Home',
-  description: 'Rajeev builds small software, ships useful web apps, and writes about the process.',
-  ogTitle: 'Rajeev',
-  ogDescription: 'Writing, projects, shipped apps, and experiments from Rajeev.',
+  description: 'Rajeev R Sharma builds small software, ships useful web apps, and writes about the process.',
+  ogTitle: 'Rajeev R Sharma',
+  ogDescription: 'Writing, projects, shipped apps, and experiments from Rajeev R Sharma.',
 })
 </script>
 
