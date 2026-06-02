@@ -14,7 +14,7 @@ draft: false
 hashnodeId: "claa0c7zy000108kx8sa03omt"
 ---
 
-To read the second and the final installment of this series, please visit [this link](https://rajeev.dev/solve-puzzle-game-using-python-multiprocessing)
+To read the second installment of this series, please visit [this link](https://rajeev.dev/solve-puzzle-game-using-python)
 
 ## The inspiration
 Couple of months back came across a [twitter post](https://twitter.com/sumul/status/1545430273113866240?s=20&t=Z60P7bP3Y40QxmZf9PfhVA) announcing a daily puzzle game. Maybe it was the FOMO created by the Wordle bandwagon (never played that), but I really liked this puzzle game. I've been a regular player of it since then, breaking the streak only 3-4 times. You can try out the original game [here](https://figure.game/)

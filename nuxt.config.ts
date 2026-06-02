@@ -29,6 +29,14 @@ export default defineNuxtConfig({
     zeroRuntime: true,
     sitemapsPathPrefix: '/sitemap',
   },
+  routeRules: {
+    '/series/python-turtle-puzzle-game': {
+      redirect: {
+        to: '/creating-puzzle-game-using-python-turtle-1',
+        statusCode: 301,
+      },
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
@@ -40,7 +48,6 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'alternate icon', href: '/favicon.ico' },
         { rel: 'alternate', type: 'application/rss+xml', title: 'Rajeev R Sharma RSS', href: '/rss.xml' },
       ],
     },
@@ -56,6 +63,7 @@ export default defineNuxtConfig({
       autoSubfolderIndex: false,
       routes: [
         '/',
+        '/robots.txt',
         '/rss.xml',
       ],
     },

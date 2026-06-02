@@ -12,7 +12,7 @@ const navigation = [
       <div class="mx-auto flex h-16 w-full max-w-4xl items-center justify-between gap-4 px-5 sm:px-6">
         <NuxtLink to="/" class="flex items-center gap-3 no-underline" aria-label="Rajeev home">
           <span class="inline-flex size-8 items-center justify-center rounded-full bg-fuchsia-600 text-sm font-semibold text-white dark:bg-fuchsia-500 dark:text-zinc-950">R</span>
-          <span class="hidden text-sm font-semibold tracking-wide text-zinc-950 sm:inline dark:text-zinc-100">rajeev.dev</span>
+          <span class="hidden text-sm font-semibold tracking-wide text-zinc-950 sm:inline dark:text-zinc-100">Rajeev R Sharma</span>
         </NuxtLink>
 
         <div class="flex items-center gap-2">
