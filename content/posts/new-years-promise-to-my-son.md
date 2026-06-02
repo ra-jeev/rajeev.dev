@@ -160,7 +160,7 @@ exports.handler = async (event, context) => {
 };
 ``` 
 
-__typename, _version, _lastChangedAt, createdAt, updatedAt fields are automatically created in the backend when you try to create a user through datastore, so we need to maintain the same structure. The above code was taken from @[Ali Spittel's](@aspittel) [github repo](https://github.com/aspittel/amplify-workshop)
+__typename, _version, _lastChangedAt, createdAt, updatedAt fields are automatically created in the backend when you try to create a user through datastore, so we need to maintain the same structure. The above code was taken from [Ali Spittel's Hashnode profile](https://hashnode.com/@aspittel) and [GitHub repo](https://github.com/aspittel/amplify-workshop)
 
 ### Other screens
 Once the auth piece was sorted out, quickly created the onboarding screens (which they see when they create an account), the dashboard, transaction form and the settings screens. 

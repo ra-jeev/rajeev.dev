@@ -24,7 +24,7 @@ So, why a chat interface for GitHub search? Well, GitHub search, as powerful as 
 
 Natural language makes the experience frictionless. Instead of crafting complex queries, you can just *ask* GitHub, like you would a colleague.
 
-When @[Sébastien Chopin](@atinuxt) mentioned the idea to me, I was onboard immediately (also because I was itching to build something…).
+When [Sébastien Chopin](https://hashnode.com/@atinuxt) mentioned the idea to me, I was onboard immediately (also because I was itching to build something…).
 
 ## How it Works?
 
