@@ -2,7 +2,7 @@
 const route = useRoute()
 const siteUrl = 'https://rajeev.dev'
 const path = computed(() => `/${route.params.slug}`)
-const canonicalUrl = computed(() => `${siteUrl}${path.value}`)
+const localUrl = computed(() => `${siteUrl}${path.value}`)
 
 const { data: post } = await useAsyncData(`post-${route.params.slug}`, () => queryCollection('posts')
   .path(path.value)
@@ -26,6 +26,7 @@ const coverUrl = computed(() => {
     ? post.value.cover
     : `${siteUrl}${post.value.cover}`
 })
+const canonicalUrl = computed(() => post.value?.canonicalUrl || localUrl.value)
 
 useSeoMeta({
   title: () => post.value?.title || 'Article',
@@ -34,6 +35,7 @@ useSeoMeta({
   ogDescription: () => post.value?.description || undefined,
   ogImage: () => coverUrl.value,
   ogType: 'article',
+  ogUrl: () => canonicalUrl.value,
   articlePublishedTime: () => post.value?.date || undefined,
   twitterCard: 'summary_large_image',
   twitterTitle: () => post.value?.title || undefined,

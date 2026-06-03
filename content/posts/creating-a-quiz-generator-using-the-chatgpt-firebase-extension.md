@@ -11,6 +11,7 @@ tags:
   - "firebaseextensions"
 draft: false
 hashnodeId: "clpigsqv8000c08jx6i4sh9kc"
+canonicalUrl: "https://invertase.io/blog/creating-a-quiz-generator-using-the-chatgpt-firebase-extension"
 ---
 
 You often want to test your knowledge whenever you're learning a new topic. You can get ready-made quizzes on the subject, but generally, they tend to be too broad. What if you only want to test yourself on the content you've just read? This is the problem statement we will tackle in this article: given some content, how can you create a quiz based on it?

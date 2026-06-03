@@ -11,6 +11,7 @@ tags:
   - "cloudrun"
 draft: false
 hashnodeId: "clbl8p4ot000a08jver0rggb3"
+canonicalUrl: "https://dev.to/ra_jeeves/creating-a-puzzle-game-with-reactjs-mongodb-atlas-gcp-cloud-run-1995"
 ---
 
 ## About GoldRoad

@@ -14,6 +14,7 @@ export default defineContentConfig({
         date: z.string(),
         slug: z.string(),
         cover: z.string().optional(),
+        canonicalUrl: z.string().url().optional(),
         tags: z.array(z.string()).default([]),
         draft: z.boolean().default(false),
         hashnodeId: z.string().optional(),

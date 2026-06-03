@@ -11,6 +11,7 @@ tags:
   - "devcycle"
 draft: false
 hashnodeId: "cm59idr0r003e09kvhj3h7q4c"
+canonicalUrl: "https://dev.to/ra_jeeves/building-brew-haven-ab-testing-my-coffee-shop-dreams-with-devcycle-401k"
 ---
 
 Do you love coffee? As developers, many of us jokingly claim to be "powered by coffee", and the thought of opening a quaint coffee shop someday often lingers in the back of our minds — perhaps as a post-dev career dream.
