@@ -3,8 +3,10 @@ defineProps<{
   project: {
     title: string
     description: string
+    status?: string
     repoUrl?: string
     liveUrl?: string
+    storeUrl?: string
     writeupUrl?: string
     tags?: string[]
   }
@@ -28,7 +30,15 @@ defineProps<{
           <Icon name="lucide:external-link" class="size-4" />
         </a>
       </h3>
-      <ProjectLinks :project="project" class="shrink-0" />
+      <div class="flex shrink-0 items-center gap-2">
+        <span
+          v-if="project.status === 'archived'"
+          class="rounded-full border border-zinc-200 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-zinc-500 dark:border-zinc-800 dark:text-zinc-500"
+        >
+          Archived
+        </span>
+        <ProjectLinks :project="project" />
+      </div>
     </div>
 
     <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">

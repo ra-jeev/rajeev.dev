@@ -31,6 +31,7 @@ export default defineContentConfig({
         category: z.enum(['shipped', 'experiment']).default('experiment'),
         repoUrl: z.string().url().optional(),
         liveUrl: z.string().url().optional(),
+        storeUrl: z.string().url().optional(),
         writeupUrl: z.string().optional(),
         tags: z.array(z.string()).default([]),
         featured: z.boolean().default(false),

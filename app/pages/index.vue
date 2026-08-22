@@ -9,13 +9,49 @@ const { data: projects } = await useAsyncData('home-projects', () => queryCollec
   .all())
 
 const recentPosts = computed(() => posts.value || [])
-const featuredProjects = computed(() => (projects.value || []).filter(project => project.featured).slice(0, 4))
+const featuredProjects = computed(() => (projects.value || []).filter(project => project.featured).slice(0, 6))
 
 useSeoMeta({
   title: 'Home',
   description: 'Rajeev R Sharma builds small software, ships useful web apps, and writes about the process.',
   ogTitle: 'Rajeev R Sharma',
   ogDescription: 'Writing, projects, shipped apps, and experiments from Rajeev R Sharma.',
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            '@id': 'https://rajeev.dev/#website',
+            'url': 'https://rajeev.dev/',
+            'name': 'Rajeev R Sharma',
+            'description': 'Writing, projects, shipped apps, and experiments from Rajeev R Sharma.',
+            'inLanguage': 'en',
+            'publisher': { '@id': 'https://rajeev.dev/#person' },
+          },
+          {
+            '@type': 'Person',
+            '@id': 'https://rajeev.dev/#person',
+            'name': 'Rajeev R Sharma',
+            'url': 'https://rajeev.dev/',
+            'image': 'https://rajeev.dev/og.png',
+            'jobTitle': 'Software Developer',
+            'description': 'Developer building clear, useful web applications with Nuxt, Cloudflare, and AI tooling.',
+            'sameAs': [
+              'https://github.com/ra-jeev',
+              'https://x.com/ra_jeeves',
+              'https://www.linkedin.com/in/rajeevrsharma',
+            ],
+          },
+        ],
+      }),
+    },
+  ],
 })
 </script>
 

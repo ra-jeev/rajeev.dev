@@ -45,7 +45,33 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: canonicalUrl },
+    { key: 'canonical', rel: 'canonical', href: canonicalUrl },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        'headline': post.value?.title,
+        'description': post.value?.description || undefined,
+        'image': coverUrl.value ? [coverUrl.value] : undefined,
+        'datePublished': post.value?.date,
+        'dateModified': post.value?.date,
+        'keywords': post.value?.tags?.length ? post.value.tags.join(', ') : undefined,
+        'mainEntityOfPage': { '@type': 'WebPage', '@id': canonicalUrl.value },
+        'author': {
+          '@type': 'Person',
+          'name': 'Rajeev R Sharma',
+          'url': siteUrl,
+        },
+        'publisher': {
+          '@type': 'Person',
+          'name': 'Rajeev R Sharma',
+          'url': siteUrl,
+        },
+      }),
+    },
   ],
 })
 </script>
@@ -61,13 +87,14 @@ useHead({
       </h1>
       <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-zinc-500 dark:text-zinc-500">
         <time :datetime="post.date">{{ publishedDate }}</time>
-        <span
+        <NuxtLink
           v-for="tag in post.tags"
           :key="tag"
-          class="rounded-full border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:text-zinc-400"
+          :to="{ path: '/blog', query: { tag } }"
+          class="rounded-full border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-600 no-underline transition hover:border-zinc-300 hover:text-fuchsia-700 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-fuchsia-300"
         >
           {{ tag }}
-        </span>
+        </NuxtLink>
       </div>
     </header>
 

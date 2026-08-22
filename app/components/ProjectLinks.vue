@@ -2,6 +2,7 @@
 defineProps<{
   project: {
     repoUrl?: string
+    storeUrl?: string
     writeupUrl?: string
   }
 }>()
@@ -19,6 +20,17 @@ defineProps<{
       class="inline-flex size-8 items-center justify-center rounded-md border border-zinc-200 text-zinc-600 no-underline transition hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-white"
     >
       <Icon name="lucide:github" class="size-4" />
+    </a>
+    <a
+      v-if="project.storeUrl"
+      :href="project.storeUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Get the app"
+      aria-label="Open app store listing"
+      class="inline-flex size-8 items-center justify-center rounded-md border border-zinc-200 text-zinc-600 no-underline transition hover:border-zinc-300 hover:text-zinc-950 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-white"
+    >
+      <Icon name="lucide:smartphone" class="size-4" />
     </a>
     <NuxtLink
       v-if="project.writeupUrl"

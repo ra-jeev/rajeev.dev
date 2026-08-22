@@ -1,5 +1,5 @@
 title: GoldRoad
-description: Daily puzzle game where everyone gets the same challenge, backed by React, MongoDB, and Cloud Run.
+description: Daily number-path puzzle with a Classic and an Expedition road each day. Now runs on Nuxt 4 and Cloudflare D1, after starting out on React and MongoDB.
 date: "2022-12-13"
 status: live
 category: shipped
@@ -7,8 +7,8 @@ repoUrl: https://github.com/ra-jeev/goldroad
 liveUrl: https://playgoldroad.com
 writeupUrl: /creating-daily-puzzle-game-with-react-mongodb-gcp-cloud-run
 tags:
-  - React
-  - MongoDB
+  - Nuxt
+  - Cloudflare
   - Game
-featured: false
-order: 13
+featured: true
+order: 0

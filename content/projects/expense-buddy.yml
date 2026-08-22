@@ -1,6 +1,6 @@
 title: Expense Buddy
 description: Basic expense tracker built with React and MongoDB Atlas App Services.
-status: experiment
+status: archived
 category: experiment
 repoUrl: https://github.com/ra-jeev/expense-buddy
 tags:
