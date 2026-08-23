@@ -223,7 +223,7 @@ This approach provides a common system prompt for all AI services while allowing
 
 ## App & Repo Links
 
-You can try out the app live at [https://name-insights.nuxt.dev/](https://name-insights.nuxt.dev/)
+You can try out the app live at [https://name-insights.pages.dev/](https://name-insights.pages.dev/)
 
 The complete app code can be found here:
 

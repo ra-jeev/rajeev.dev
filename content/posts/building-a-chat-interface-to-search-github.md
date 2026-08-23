@@ -51,7 +51,7 @@ We’ll explore the key aspects of this process in the sections to follow. Ready
 
 ## Project Setup
 
-This project follows a similar setup to my last one [Hub Chat](https://hub-chat.nuxt.dev) ([GitHub link](https://github.com/ra-jeev/hub-chat)), and I’ve reused several components with some slight modifications. I won't bore you by repeating the same details, but if you’re new here, feel free to follow along with both posts ([previous post](https://rajeev.dev/create-cloudflare-workers-ai-llm-playground-using-nuxthub-and-nuxtui)) for a more complete picture.
+This project follows a similar setup to my last one [Hub Chat](https://hub-chat.rajeevs.workers.dev) ([GitHub link](https://github.com/ra-jeev/hub-chat)), and I’ve reused several components with some slight modifications. I won't bore you by repeating the same details, but if you’re new here, feel free to follow along with both posts ([previous post](https://rajeev.dev/create-cloudflare-workers-ai-llm-playground-using-nuxthub-and-nuxtui)) for a more complete picture.
 
 ### Tech Stack
 

@@ -79,7 +79,7 @@ To use the Gmail APIs we need to set up a Google Cloud Project and a Google Acco
 
 Then we need to create OAuth Client Ids for authenticating users, and possibly an Auth Consent Screen (if this is the first time we're setting up OAuth)
 
-Setting up OAuth Client Id will give us a credentials file which we will need in our gmail\_handler for connection. You can find more information on [how to set up a Google project for the Gmail APIs here](https://developers.google.com/gmail/quickstart/python).
+Setting up OAuth Client Id will give us a credentials file which we will need in our gmail\_handler for connection. You can find more information on [how to set up a Google project for the Gmail APIs here](https://developers.google.com/workspace/gmail/api/quickstart/python).
 
 ### Initing the GmailHandler class
 

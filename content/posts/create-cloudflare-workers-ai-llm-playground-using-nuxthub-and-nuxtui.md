@@ -39,7 +39,7 @@ This is how the interface will look when we are through this article:
 
 ![LLM playground chat interface ](/images/posts/create-cloudflare-workers-ai-llm-playground-using-nuxthub-and-nuxtui/4dc571f5-3c82-4496-a75b-6a70d4dbbd0c-f1a7f42690.png)
 
-You can try it out live here: [https://hub-chat.nuxt.dev/](https://hub-chat.nuxt.dev/)
+You can try it out live here: [https://hub-chat.rajeevs.workers.dev/](https://hub-chat.rajeevs.workers.dev/)
 
 We will cover each of the tasks in detail in the following sections.
 
