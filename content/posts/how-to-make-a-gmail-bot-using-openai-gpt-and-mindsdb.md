@@ -643,7 +643,7 @@ When I started working on this feature, I had the following goals and their resp
     
 2. Contribute to the MindsDB project: I've already [opened a PR](https://github.com/mindsdb/mindsdb/pull/5889) for my changes and now I'm hoping that it gets merged into the codebase.
     
-3. Create a Gmail Bot: We've all the ingredients in place, we just need to deploy it somewhere so that it is always available. I did try deploying the source on a droplet but I'm stuck with an error for which I've raised a [GitHub issue](https://github.com/mindsdb/mindsdb/issues/5892).
+3. Create a Gmail Bot: We've all the ingredients in place, we just need to deploy it somewhere so that it is always available. I did try deploying the source on a droplet but I'm stuck with an error for which I've raised a GitHub issue.
     
 4. Practice my Python skills: I think I've made good progress on this while working on the feature. Python is not my area of expertise, so I'm quite pumped that I was able to create a working integration in a short span of 7-8 days.
     

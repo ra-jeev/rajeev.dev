@@ -18,7 +18,7 @@ This article is about exploring the new talk of the town, `bun`, getting to know
 
 ## Introduction
 
-When I learnt about the [Outerbase](https://beta.outerbase.com/) hackathon on [Hashnode](https://hashnode.com/) I was intrigued about it. I thought it was another database, "base" being the operative word. But I was only half right, or maybe half wrong, it depends on whom you're asking. Outerbase is an interface to your data (currently only residing in some relational databases), but it adds a lot of bells and whistles to make it interesting.
+When I learnt about the Outerbase hackathon on [Hashnode](https://hashnode.com/) I was intrigued about it. I thought it was another database, "base" being the operative word. But I was only half right, or maybe half wrong, it depends on whom you're asking. Outerbase is an interface to your data (currently only residing in some relational databases), but it adds a lot of bells and whistles to make it interesting.
 
 Some of the features include:
 

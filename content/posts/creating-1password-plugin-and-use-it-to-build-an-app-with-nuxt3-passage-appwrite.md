@@ -341,7 +341,7 @@ But it doesn't work, you'll get the below error
 Cannot use import statement outside a module
 ```
 
-This happens because Nuxt is running in SSR mode and web components are not available server side. You can get more information on this passage documentation for [NextJs here](https://docs.passage.id/frontend/examples-by-framework/next.js#:~:text=Calling%20the%20import,error%20being%20thrown.). I tried following the same approach outlined in the link, load the component client side in the `onMounted` hook
+This happens because Nuxt is running in SSR mode and web components are not available server side. You can get more information on this in Passage’s NextJs documentation. I tried following the same approach outlined there, load the component client side in the `onMounted` hook
 
 ```typescript
 onMounted(()=>{

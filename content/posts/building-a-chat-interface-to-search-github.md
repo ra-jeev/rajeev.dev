@@ -1104,10 +1104,6 @@ url: https://github.com/ra-jeev/chat-github
 
 You can deploy the app using your NuxtHub admin panel or manually through the NuxtHub CLI. For more details on deploying an app through NuxtHub, refer to the [official documentation](https://hub.nuxt.com/docs/getting-started/deploy).
 
-The best part is that this project is now listed as a template on the NuxtHub Templates page. So, if you already have a NuxtHub account, you can deploy this project in one click using the button below (Just remember to add the necessary environment variables in the panel).
-
-[![One click NuxtHub deploy button](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?template=chat-github)
-
 ## Further Enhancements
 
 Currently, we rely on the AI's ability to generate GitHub API queries from natural language input. While we’ve provided it with details about various qualifiers, it can still struggle with more complex or intricate queries. I also experimented with tool-calling models from `Cloudflare’s Workers AI` and `Groq API`, and found that `gpt-4o` performed better for these tasks. `Claude 3.5 Sonnet` should definitely offer even better results, but it tends to be more expensive.

@@ -83,7 +83,7 @@ Now that we've our datastore, we can create the UI and integrate both. This is w
 
 Saw the usage of `useState` there, so went on another tangent and read through the react docs on `useState` as well as `useEffect`. This is how I prefer to learn, you get the initial basic idea first, start building, then you hit a roadblock or see something interesting and you dive deeper.
 
-I needed different routes for different screens. Saw the [protected routes](https://ui.docs.amplify.aws/react/guides/auth-protected) guide on Amplify UI, went on another tangent to learn little bit of react-router.  All this while our project keeps on changing by trying out these different examples.
+I needed different routes for different screens. Saw the protected routes guide on Amplify UI, went on another tangent to learn little bit of react-router.  All this while our project keeps on changing by trying out these different examples.
 
 ### Authentication
 This didn't require any UI as it comes prebuilt. But to use it we need to set it up first using Amplify Studio. I needed the user's name as part of sign up (see user data model), so I configured that in the sign up attributes section. After deploying and pulling the changes I could create an account and login. 
@@ -160,7 +160,7 @@ exports.handler = async (event, context) => {
 };
 ``` 
 
-__typename, _version, _lastChangedAt, createdAt, updatedAt fields are automatically created in the backend when you try to create a user through datastore, so we need to maintain the same structure. The above code was taken from [Ali Spittel's Hashnode profile](https://hashnode.com/@aspittel) and [GitHub repo](https://github.com/aspittel/amplify-workshop)
+__typename, _version, _lastChangedAt, createdAt, updatedAt fields are automatically created in the backend when you try to create a user through datastore, so we need to maintain the same structure. The above code was taken from [Ali Spittel's Hashnode profile](https://hashnode.com/@aspittel) and GitHub repo
 
 ### Other screens
 Once the auth piece was sorted out, quickly created the onboarding screens (which they see when they create an account), the dashboard, transaction form and the settings screens. 
