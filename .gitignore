@@ -33,3 +33,9 @@ logs
 
 # Dev Crumbs directory
 .devcrumbs
+
+# Post outlines and ideas (quote private chats)
+/notes/
+
+# Local Claude Code config
+/.claude/
