@@ -12,6 +12,17 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          // Code blocks have a dark background in both color modes.
+          theme: 'github-dark',
+          langs: ['js', 'ts', 'vue', 'json', 'bash', 'css', 'html', 'yaml', 'md', 'python', 'go', 'sql', 'xml', 'ini'],
+        },
+      },
+    },
+  },
   vite: {
     plugins: [
       tailwindcss(),
