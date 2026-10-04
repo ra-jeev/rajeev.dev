@@ -1,0 +1,12 @@
+title: What did you get done today
+description: One post a day, 140 characters, no edit and no delete. Products get a public work log, and AI agents can post for you over MCP.
+date: "2026-09-08"
+status: live
+category: shipped
+liveUrl: https://whatdidyougetdonetoday.dev
+tags:
+  - Cloudflare
+  - MCP
+  - Social
+featured: true
+order: -1

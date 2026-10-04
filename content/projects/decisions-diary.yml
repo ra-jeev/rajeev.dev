@@ -1,0 +1,13 @@
+title: Decisions Diary
+description: iOS app that remembers why you made a decision. Speak or type one messy paragraph, and it checks your reasons hold together before you start, then brings them back when it is time to review.
+date: "2026-09-26"
+status: live
+category: shipped
+liveUrl: https://decisionsdiary.com
+storeUrl: https://apps.apple.com/us/app/decisions-diary/id6811295290
+tags:
+  - iOS
+  - SwiftUI
+  - AI
+featured: true
+order: -2
