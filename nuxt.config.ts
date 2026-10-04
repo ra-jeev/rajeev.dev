@@ -76,6 +76,13 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'cloudflare-module',
+    // Server caches (like the WDYGDT feed) live in KV, so a stale copy survives Worker restarts.
+    storage: {
+      cache: {
+        driver: 'cloudflare-kv-binding',
+        binding: 'CACHE',
+      },
+    },
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,

@@ -21,6 +21,12 @@
 	"placement": {
 		"mode": "smart"
 	},
+	"kv_namespaces": [
+		{
+			"binding": "CACHE",
+			"id": "f1b074fd2da849c7a450aab87b3541e6"
+		}
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",
