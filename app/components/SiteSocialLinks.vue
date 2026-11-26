@@ -9,7 +9,7 @@ const links = [
   { label: 'GitHub', href: 'https://github.com/ra-jeev', icon: 'lucide:github' },
   { label: 'X', href: 'https://x.com/ra_jeeves', icon: 'x' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rajeevrsharma', icon: 'lucide:linkedin' },
-  { label: 'Email', href: 'mailto:i.rarsh@gmail.com', icon: 'lucide:mail' },
+  { label: 'Email', href: 'mailto:hello@rajeev.dev', icon: 'lucide:mail' },
   { label: 'RSS', href: '/rss.xml', icon: 'lucide:rss' },
 ]
 </script>
